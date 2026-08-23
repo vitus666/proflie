@@ -1200,6 +1200,19 @@
 			visibility: visible;
 		}
 
+		#header.page-header {
+			height: 8rem;
+			padding-bottom: 2rem;
+		}
+
+		body.page-content #nav {
+			margin: 1.5rem auto 0.5rem auto;
+		}
+
+		#header.page-header .logo {
+			display: none;
+		}
+
 			#header .logo:hover {
 				border-color: #18bfef !important;
 				color: #18bfef !important;
@@ -1332,10 +1345,10 @@
 			}
 
 				#nav ul.links li a {
-					-moz-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
-					-webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
-					-ms-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
-					transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+					-moz-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, opacity 0.2s ease-in-out;
+					-webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, opacity 0.2s ease-in-out;
+					-ms-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, opacity 0.2s ease-in-out;
+					transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, opacity 0.2s ease-in-out;
 					display: block;
 					color: #fff;
 					font-size: 0.8rem;
@@ -1344,22 +1357,34 @@
 				}
 
 					#nav ul.links li a:hover {
-						color: inherit !important;
-						background-color: rgba(255, 255, 255, 0.1);
+						color: #fff !important;
+						background-color: rgba(255, 255, 255, 0.25);
+						opacity: 1;
+						box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.18);
 					}
+
+				#nav ul.links li:hover {
+					background-color: rgba(255, 255, 255, 0.08);
+				}
 				#nav ul.links li.active {
 					color: #000;
 				}
 
 					#nav ul.links li.active a {
-						color: #fff;
+						color: #fff !important;
+						background-color: rgba(255, 255, 255, 0.25);
+						opacity: 1;
+						box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.18);
 					}
 						#nav ul.links li.active ul.submenu li a {
 							color: #000;
 						}
 
 						#nav ul.links li.active a:hover {
-							color: #1E90FF !important;
+							color: #fff !important;
+							background-color: rgba(255, 255, 255, 0.25);
+							opacity: 1;
+							box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.18);
 						}
 
 		#nav ul.icons {
@@ -1383,6 +1408,15 @@
 		}
 
 /* Main */
+
+	body.page-content #main,
+	body.page-content #main > *,
+	.page-content #main,
+	.page-content #main > * {
+		background: rgba(128, 128, 128, 0.5) !important;
+		border-radius: 10px !important;
+		box-shadow: none !important;
+	}
 
 	#main {
 		border-radius:5px;
@@ -2280,7 +2314,7 @@
 			#me {
 				padding: 0;
 				margin-right: 3rem; 
-				height: 20em;
+				height: 6.7em;
 			}
 
 				#me .pic {
@@ -2347,7 +2381,7 @@
 						position: absolute;
 						left: 0;
 						bottom: 52.5%;
-						font-size: 3.5rem;
+						font-size: 2.1rem;
 						margin: 0;
 					}
 
@@ -2355,7 +2389,7 @@
 						position: absolute;
 						left: 0;
 						top: 52.5%;
-						font-size: 1.5em;
+						font-size: 0.95em;
 						letter-spacing: -0.015em;
 						margin-top: 0;
 					}

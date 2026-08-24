@@ -1455,7 +1455,7 @@
 		@media screen and (max-width: 736px) {
 
 			#main > * {
-				background-color: #ffffff;
+				background: rgba(128, 128, 128, 0.3);
 				padding: 0.5rem 1rem 0.1rem 1rem ;
 			}
 
@@ -2065,6 +2065,10 @@
 			}
 
 		}
+
+	body.page-content #navPanelToggle {
+		color: #000000;
+	}
 
 	#navPanel {
 		-moz-transform: translateX(20rem);

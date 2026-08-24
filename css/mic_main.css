@@ -1455,7 +1455,7 @@
 		@media screen and (max-width: 736px) {
 
 			#main > * {
-				background: rgba(128, 128, 128, 0.3);
+				background: rgba(128, 128, 128, 0.5);
 				padding: 0.5rem 1rem 0.1rem 1rem ;
 			}
 

@@ -4216,7 +4216,7 @@
 		border-radius: 6px;
 		box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.08);
 		margin: 0 0 2em 0;
-		padding-bottom: 2rem;
+		/* padding-bottom: 2rem; */
 		overflow: hidden;
 		-moz-transition: transform 0.25s ease-in-out, box-shadow 0.25s ease-in-out;
 		-webkit-transition: transform 0.25s ease-in-out, box-shadow 0.25s ease-in-out;

@@ -129,8 +129,8 @@
                     </li>
                     
                     <li>
-                        <a title="globe" href="https://your-site.example" target="_blank" rel="noopener">
-                            <i class="icon fa fa-globe"></i>
+                        <a title="camera-retro" href="https://retro.app/u/gauic._.c" target="_blank" rel="noopener">
+                            <i class="icon fa fa-camera-retro"></i>
                         </a>
                     </li>
                     
@@ -141,7 +141,7 @@
             
             <!-- Post -->
             <div class="typo" style="padding: 3rem;">
-                <h1 id="關於我"><a href="#關於我" class="headerlink" title="關於我"></a><strong>關於我</strong></h1><img src="/proflie/photo/intro.jpg" alt="自我介紹照片" style="width: 300px; max-width: 100%; height: auto;">
+                <h1 id="關於我"><a href="#關於我" class="headerlink" title="關於我"></a><strong>關於我</strong></h1><img src="/proflie/photo/intro.jpg" alt="自我介紹照片" style="width: 200px; max-width: 100%; height: auto; border-radius: 50%;">
 
 
 <p><strong>嗨，我是 鄭家宇，綽號可以叫 嘎一。</strong><br><strong>從 磐石高中機械科 特選上 元智大學資工系。</strong><br><strong>個性還挺喜歡聊天，是個 ENFP。</strong></p>
@@ -199,36 +199,47 @@
 
 <!-- add animation -->
 <style>
+	.btn_click_load {
+		text-align: center;
+		margin: 1.5rem auto;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
 	.disqus_click_btn {
-            line-height: 30px;
-            margin: 0;
-            min-width: 50px;
-            padding: 0 14px;
+            line-height: 36px;
+            margin: 0 auto;
+            min-width: 160px;
+            padding: 0 24px;
             display: inline-block;
-            font-family: "Roboto", "Helvetica", "Arial", sans-serif;
-            font-size: 14px;
-            font-weight: 400;
-            text-transform: uppercase;
-            letter-spacing: 0;
+            font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, "PingFang SC", "Microsoft YaHei", sans-serif;
+            font-size: 15px;
+            font-weight: 500;
+            letter-spacing: 1px;
             overflow: hidden;
-            will-change: box-shadow;
-            transition: box-shadow .2s cubic-bezier(.4, 0, 1, 1), background-color .2s cubic-bezier(.4, 0, .2, 1), color .2s cubic-bezier(.4, 0, .2, 1);
+            will-change: box-shadow, background-color;
+            transition: box-shadow .25s ease, background-color .25s ease, color .25s ease, transform .2s ease;
             outline: 0;
             cursor: pointer;
             text-decoration: none;
             text-align: center;
             vertical-align: middle;
             border: 0;
-            background: rgba(158, 158, 158, .2);
-            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
-            color: #fff;
-            background-color: #7EC0EE;
-            text-shadow: 0
+            border-radius: 6px;
+            color: #e8f4fc;
+            background-color: rgba(30, 80, 120, 0.65);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+        }
+	.disqus_click_btn:hover {
+            background-color: rgba(40, 110, 160, 0.85);
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+            transform: translateY(-1px);
+            color: #ffffff;
         }
 </style>
 	
 <div class="btn_click_load" id="disqus_bt"> 
-    <button class="disqus_click_btn">点击查看评论</button>
+    <button class="disqus_click_btn">點擊查看評論</button>
 </div>
 
 <!--
@@ -270,8 +281,9 @@ $('.btn_click_load').click(function() {
 </div>
 <style>
     #disqus-comment{
-        background-color: #eee;
+        background-color: rgba(40, 44, 52, 0.55);
         padding: 2pc;
+        border-radius: 8px;
     }
 </style>
 

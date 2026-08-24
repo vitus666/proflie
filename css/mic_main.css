@@ -1334,7 +1334,7 @@
 			padding-left: 0;
 			text-transform: uppercase;
 		}
-		.menu .active a :hover{
+		.menu .active a:hover{
 			color: #fff;
 		}
 
@@ -1350,17 +1350,46 @@
 					-ms-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, opacity 0.2s ease-in-out;
 					transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, opacity 0.2s ease-in-out;
 					display: block;
+					position: relative;
 					color: #fff;
 					font-size: 0.8rem;
 					outline: none;
 					padding: 0 2rem;
 				}
 
-					#nav ul.links li a:hover {
+					/* 目前所在頁面（首頁 / about / friends...）下方的品牌色細線指示器，滑鼠移過去時同樣出現 */
+					#nav ul.links li a::after {
+						content: '';
+						position: absolute;
+						left: 2rem;
+						right: 2rem;
+						bottom: 0.65rem;
+						height: 2px;
+						background-color: #18bfef;
+						-moz-transform: scaleX(0);
+						-webkit-transform: scaleX(0);
+						-ms-transform: scaleX(0);
+						transform: scaleX(0);
+						-moz-transition: transform 0.25s ease-in-out;
+						-webkit-transition: transform 0.25s ease-in-out;
+						-ms-transition: transform 0.25s ease-in-out;
+						transition: transform 0.25s ease-in-out;
+					}
+
+					#nav ul.links li a:hover,
+					#nav ul.links li.active a {
 						color: #fff !important;
 						background-color: rgba(255, 255, 255, 0.25);
 						opacity: 1;
 						box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.18);
+					}
+
+					#nav ul.links li a:hover::after,
+					#nav ul.links li.active a::after {
+						-moz-transform: scaleX(1);
+						-webkit-transform: scaleX(1);
+						-ms-transform: scaleX(1);
+						transform: scaleX(1);
 					}
 
 				#nav ul.links li:hover {
@@ -1370,21 +1399,12 @@
 					color: #000;
 				}
 
-					#nav ul.links li.active a {
-						color: #fff !important;
-						background-color: rgba(255, 255, 255, 0.25);
-						opacity: 1;
-						box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.18);
-					}
 						#nav ul.links li.active ul.submenu li a {
 							color: #000;
 						}
 
-						#nav ul.links li.active a:hover {
-							color: #fff !important;
-							background-color: rgba(255, 255, 255, 0.25);
-							opacity: 1;
-							box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.18);
+						#nav ul.links li.active ul.submenu li a::after {
+							display: none;
 						}
 
 		#nav ul.icons {
@@ -4203,11 +4223,38 @@
 	.link_box {
 		background: #fff;
 		border-radius: 6px;
-		link_box-shadow: 0 2px 0 0 #e5e5e5;
+		box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.08);
 		margin: 0 0 2em 0;
 		padding-bottom: 2rem;
-		
+		overflow: hidden;
+		-moz-transition: transform 0.25s ease-in-out, box-shadow 0.25s ease-in-out;
+		-webkit-transition: transform 0.25s ease-in-out, box-shadow 0.25s ease-in-out;
+		-ms-transition: transform 0.25s ease-in-out, box-shadow 0.25s ease-in-out;
+		transition: transform 0.25s ease-in-out, box-shadow 0.25s ease-in-out;
 	}
+
+		.link_box.special:hover {
+			-moz-transform: translateY(-6px);
+			-webkit-transform: translateY(-6px);
+			-ms-transform: translateY(-6px);
+			transform: translateY(-6px);
+			box-shadow: 0 14px 28px 0 rgba(0, 0, 0, 0.16);
+		}
+
+		.link_box .page_title {
+			overflow: hidden;
+			-moz-transition: -moz-transform 0.4s ease-in-out;
+			-webkit-transition: -webkit-transform 0.4s ease-in-out;
+			-ms-transition: -ms-transform 0.4s ease-in-out;
+			transition: transform 0.4s ease-in-out;
+		}
+
+		.link_box.special:hover .page_title {
+			-moz-transform: scale(1.06);
+			-webkit-transform: scale(1.06);
+			-ms-transform: scale(1.06);
+			transform: scale(1.06);
+		}
 
 		.link_box > :last-child {
 			margin-bottom: 0;
@@ -4216,7 +4263,7 @@
 		.link_box.alt {
 			background: none !important;
 			border-radius: 0 !important;
-			link_box-shadow: none !important;
+			box-shadow: none !important;
 			margin: 0 0 2em 0;
 			padding: 0 !important;
 		}
@@ -4486,3 +4533,29 @@
 	}
 
 
+
+/* ---------------- UI/UX polish ---------------- */
+html {
+	scroll-behavior: smooth;
+}
+::selection {
+	background: #18bfef;
+	color: #fff;
+}
+::-webkit-scrollbar {
+	width: 10px;
+	height: 10px;
+}
+::-webkit-scrollbar-track {
+	background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+	background: #18bfef;
+	border-radius: 6px;
+}
+::-webkit-scrollbar-thumb:hover {
+	background: #0fa6d1;
+}
+#footer a:not(.icon):hover {
+	color: #18bfef;
+}

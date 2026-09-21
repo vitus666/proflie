@@ -2,15 +2,4 @@
 
 ## About Me
 - **Name**: 鄭家宇
-- **Email**: s1153336@mail.yzu.edu.tw
-- **GitHub**: [@username](https://github.com/<username>)
-
-## About This Site
-This is my personal portfolio and project showcase website built with GitHub Pages.
-
-## Featured Projects
-- [Project Name]((https://vitus666.github.io/proflie/)) — Brief description
-- [Course Repository](https://github.com/<username>/11501_CI001) — CI001 Course assignments
-
-## Contact
-Feel free to reach out to me at your_email@mail.yzu.edu.tw
+製作這個網站的用途:老師我已經用這個帳號做我自己的blog裡面放了我的心得，但是因為github只允許架一個靜態網站所以我想使用這個blog交作業
